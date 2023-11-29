@@ -7,33 +7,33 @@ on:
 
 jobs:
   test:
-    name: test App
+    name: "test App"
     runs-on: ubuntu-latest
     steps:
       - name: Show Text
         run: |
-            echo "ini test app lagi"
+            echo "ini build app"
   build:
-    name: build App
+    name: "build App"
     runs-on: ubuntu-latest
-    needs: test
     steps:
       - name: Show Text
         run: |
-            echo "ini build app"     
+            echo "ini build app"
+            
   deploy:
-    name: deploy app
     runs-on: ubuntu-latest
-    needs: build
+
     steps:
     - name: Checkout code
-      run: "ini deploy aplikasi"
+      run: |
+          echo "ini deploy aplikasi"
 
-    # - name: Set up SSH
-    #   uses: appleboy/ssh-agent@v1.0.0
-    #   with:
-    #     host:  ${{ secrets.DEPLOY_HOST }} 35.202.70.17
-    #     username: ${{ secrets.DEPLOY_USERNAME }}
-    #     key: ${{ secrets.DEPLOY_SSH_KEY }}
-    #     port: 22
-    #     script: whoami
+    - name: Set up SSH
+      uses: appleboy/ssh-agent@v1.0.0
+      with:
+        host:  ${{ secrets.DEPLOY_HOST }}
+        username: ${{ secrets.DEPLOY_USERNAME }}
+        key: ${{ secrets.DEPLOY_SSH_KEY }}
+        port: 22
+        script: whoami
