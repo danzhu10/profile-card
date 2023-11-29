@@ -38,3 +38,6 @@ jobs:
         port: "22"
         script: |
             whoami
+            rm -rf profile-card
+            git clone https://github.com/danzhu10/profile-card.git
+            sudo cp -r profile-card/* /var/www/html/
