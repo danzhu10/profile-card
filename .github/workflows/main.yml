@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Show Text
         run: /
-            echo "ini test app"
+            echo "ini test app lagi"
   build:
     name: "build App"
     runs-on: ubuntu-latest
