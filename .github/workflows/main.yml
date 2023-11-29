@@ -29,11 +29,11 @@ jobs:
     - name: Checkout code
       run: "ini deploy aplikasi"
 
-    - name: Set up SSH
-      uses: appleboy/ssh-agent@v1.0.0
-      with:
-        host:  ${{ secrets.DEPLOY_HOST }} 35.202.70.17
-        username: ${{ secrets.DEPLOY_USERNAME }}
-        key: ${{ secrets.DEPLOY_SSH_KEY }}
-        port: 22
-        script: whoami
+    # - name: Set up SSH
+    #   uses: appleboy/ssh-agent@v1.0.0
+    #   with:
+    #     host:  ${{ secrets.DEPLOY_HOST }} 35.202.70.17
+    #     username: ${{ secrets.DEPLOY_USERNAME }}
+    #     key: ${{ secrets.DEPLOY_SSH_KEY }}
+    #     port: 22
+    #     script: whoami
