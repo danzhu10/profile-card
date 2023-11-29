@@ -3,20 +3,28 @@ name: Deploy to Server
 on:
   push:
     branches:
-      - main
+      - develop
 
 jobs:
-  build:
-    name: "build App"
+ test:
+    name: "test App"
     runs-on: ubuntu-latest
     steps:
       - name: Show Text
         run: /
-            echo "ini build app"
-            
-  deploy:
+            echo "ini test app"
+  build:
+    name: "build App"
     runs-on: ubuntu-latest
-
+    needs: test
+    steps:
+      - name: Show Text
+        run: /
+            echo "ini build app"     
+  deploy:
+    name: "deploy app"
+    runs-on: ubuntu-latest
+    needs: build
     steps:
     - name: Checkout code
       run: "ini deploy aplikasi"
