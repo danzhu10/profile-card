@@ -34,7 +34,7 @@ jobs:
       with:
         host: "34.128.122.90"
         username: ${{ secrets.DEPLOY_USERNAME }}
-        key: ${{ secrets.DEPLOY_KEY }}
+        key: ${{ secrets.PRIVATE_KEY }}
         port: "22"
         script: |
             whoami
