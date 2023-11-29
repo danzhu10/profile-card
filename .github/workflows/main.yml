@@ -6,7 +6,7 @@ on:
       - develop
 
 jobs:
- test:
+  test:
     name: "test App"
     runs-on: ubuntu-latest
     steps:
