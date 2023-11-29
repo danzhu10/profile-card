@@ -34,6 +34,6 @@ jobs:
       with:
         host:  ${{ secrets.DEPLOY_HOST }}
         username: ${{ secrets.DEPLOY_USERNAME }}
-        key: ${{ secrets.DEPLOY_SSH_KEY }}
+        key: ${{ secrets.DEPLOY_KEY }}
         port: 22
         script: whoami
