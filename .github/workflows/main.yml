@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show Text
-        run: /
+        run: |
             echo "ini test app lagi"
   build:
     name: build App
@@ -19,7 +19,7 @@ jobs:
     needs: test
     steps:
       - name: Show Text
-        run: /
+        run: |
             echo "ini build app"     
   deploy:
     name: deploy app
