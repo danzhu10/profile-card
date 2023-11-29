@@ -30,7 +30,7 @@ jobs:
           echo "ini deploy aplikasi"
 
     - name: Set up SSH
-      uses: appleboy/ssh-agent@v1.0.0
+      uses: appleboy/ssh-action@v1.0.0
       with:
         host:  ${{ secrets.DEPLOY_HOST }}
         username: ${{ secrets.DEPLOY_USERNAME }}
